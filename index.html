@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of a Senior Flutter & Cross-Platform Mobile Application Developer. Specializing in Clean Architecture, BLoC, Riverpod, and high-performance iOS & Android apps.">
+  <meta name="keywords" content="Flutter Developer, Mobile App Developer, Dart, BLoC, Clean Architecture, iOS, Android, Cross-Platform">
+  <title>Flutter & Mobile Application Developer | Portfolio</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===================================================================
+       HEADER & NAVIGATION
+       =================================================================== -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-logo">
+        <div class="brand-icon">
+          <!-- Flutter SVG Mark -->
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M14.314 0L2.3 12 6 15.7 21.686 0h-7.372zM14.314 9.429L7.857 15.886 14.314 22.343h7.372L15.229 15.886 21.686 9.429h-7.372z" fill="#ffffff"/>
+          </svg>
+        </div>
+        <span id="brandName">Flutter.dev</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#skills" class="nav-link">Skills & CS</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Theme" title="Toggle Light/Dark Theme">
+          <i data-lucide="sun"></i>
+        </button>
+
+        <a href="#contact" class="btn btn-primary btn-sm">
+          <i data-lucide="send" style="width: 15px; height: 15px;"></i> Hire Me
+        </a>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Navigation Menu">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================================================================
+       HERO SECTION WITH 3D PHONE SIMULATOR
+       =================================================================== -->
+  <section class="section hero-section" id="hero">
+    <div class="container hero-grid">
+      <!-- Left Column: Bio & Value Proposition -->
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="status-dot"></span>
+          <span id="heroBadgeText">Available for Full-time & Freelance Projects</span>
+        </div>
+
+        <h1 class="hero-title">
+          Hi, I'm <span class="gradient-text" id="heroName">Flutter Developer</span> 👋
+        </h1>
+
+        <div class="hero-subtitle" id="heroSubtitle">
+          Senior Flutter & Mobile Application Developer
+        </div>
+
+        <p class="hero-description" id="heroBio">
+          Passionate Flutter Developer crafting high-performance, cross-platform mobile applications for iOS & Android. Specialized in Clean Architecture, reactive state management (BLoC/Riverpod), and delightful UI/UX animations.
+        </p>
+
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">
+            <i data-lucide="layers"></i> Explore Projects
+          </a>
+          <a href="#contact" class="btn btn-secondary">
+            <i data-lucide="mail"></i> Get In Touch
+          </a>
+          <a href="#" class="btn btn-secondary" id="heroResumeBtn">
+            <i data-lucide="file-text"></i> Download CV
+          </a>
+        </div>
+
+        <div class="hero-socials" id="heroSocials">
+          <!-- Populated dynamically by main.js -->
+        </div>
+      </div>
+
+      <!-- Right Column: Interactive Smartphone Mockup Simulator -->
+      <div class="hero-visual">
+        <div class="phone-mockup-wrapper">
+          <!-- Floating Badges -->
+          <div class="floating-badge badge-top-left">
+            <span style="color: #38bdf8; font-size: 1.1rem;">⚡</span> Clean Architecture & BLoC
+          </div>
+          <div class="floating-badge badge-bottom-right">
+            <span style="color: #10b981; font-size: 1.1rem;">🚀</span> 60 / 120 FPS Native Feel
+          </div>
+
+          <!-- Smartphone Frame -->
+          <div class="phone-device">
+            <div class="phone-screen">
+              <!-- Dynamic Island Notch -->
+              <div class="phone-dynamic-island">
+                <div class="island-camera"></div>
+                <div class="island-sensor"></div>
+              </div>
+
+              <!-- Phone Screen Content -->
+              <div class="phone-screen-content">
+                <img id="heroPhoneImg" src="https://images.unsplash.com/photo-1556742049-0a67c5574f73?auto=format&fit=crop&w=600&q=80" alt="App Preview" class="phone-slide-img">
+
+                <div class="phone-overlay-info">
+                  <span class="phone-app-pill" id="heroPhoneBadge">Featured App</span>
+                  <div class="phone-app-title" id="heroPhoneTitle">QuickMart E-Commerce</div>
+                  <div class="phone-app-subtitle" id="heroPhoneSubtitle">Clean Architecture • BLoC • Stripe</div>
+                  
+                  <div class="phone-interactive-bar">
+                    <button class="phone-control-btn" id="phonePrevBtn">
+                      <i data-lucide="chevron-left" style="width: 14px; height: 14px;"></i> Prev
+                    </button>
+                    <a href="#projects" class="phone-control-btn" style="background: rgba(56, 189, 248, 0.3);">
+                      <i data-lucide="eye" style="width: 14px; height: 14px;"></i> View All
+                    </a>
+                    <button class="phone-control-btn" id="phoneNextBtn">
+                      Next <i data-lucide="chevron-right" style="width: 14px; height: 14px;"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       METRICS / STATS BAR
+       =================================================================== */ -->
+  <section class="metrics-section" id="about">
+    <div class="container">
+      <div class="metrics-grid" id="metricsGrid">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       FEATURED PROJECTS SECTION
+       =================================================================== -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i data-lucide="smartphone" style="width: 15px; height: 15px;"></i> Portfolio Showcase</span>
+        <h2 class="section-title">Featured Mobile <span class="gradient-text">Applications</span></h2>
+        <p class="section-description">
+          A curated collection of production apps published on Google Play and Apple App Store, open-source packages, and cutting-edge UI/UX experiments.
+        </p>
+      </div>
+
+      <!-- Filter Bar -->
+      <div class="projects-filter-bar">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="production">Production Apps (Stores)</button>
+        <button class="filter-btn" data-filter="opensource">Open Source Boilerplates</button>
+        <button class="filter-btn" data-filter="concept">UI/UX & Shaders</button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="projects-grid" id="projectsGrid">
+        <!-- Dynamic Projects from data.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       SKILLS & ARCHITECTURE SECTION
+       =================================================================== -->
+  <section class="section skills-section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i data-lucide="cpu" style="width: 15px; height: 15px;"></i> Technical Expertise</span>
+        <h2 class="section-title">Skills & <span class="gradient-text">Architecture Stack</span></h2>
+        <p class="section-description">
+          Engineered for production scale. Deep expertise across Flutter, Dart, native platform bridges, state management, and modern cloud ecosystems.
+        </p>
+      </div>
+
+      <!-- Categorized Skills Grid -->
+      <div class="skills-grid" id="skillsGrid">
+        <!-- Rendered dynamically -->
+      </div>
+
+      <!-- Clean Architecture Feature Banner -->
+      <div class="arch-callout">
+        <div class="arch-icon">
+          <i data-lucide="layers" style="width: 32px; height: 32px;"></i>
+        </div>
+        <div class="arch-text">
+          <h3>Clean Architecture & Scalable Codebases</h3>
+          <p>
+            I structure mobile projects using strict separation of concerns (Domain, Data, Presentation layers), Dependency Injection (get_it/injectable), immutable value objects (freezed), and comprehensive unit & widget testing to ensure 99.9% crash-free sessions.
+          </p>
+        </div>
+        <a href="#contact" class="btn btn-secondary btn-sm" style="white-space: nowrap;">
+          <i data-lucide="message-square"></i> Discuss Code Audit
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       SERVICES OFFERED
+       =================================================================== -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i data-lucide="briefcase" style="width: 15px; height: 15px;"></i> What I Offer</span>
+        <h2 class="section-title">Comprehensive <span class="gradient-text">Mobile Services</span></h2>
+        <p class="section-description">
+          From concept and Figma wireframes to store publication, CI/CD pipelines, and post-launch maintenance.
+        </p>
+      </div>
+
+      <div class="services-grid" id="servicesGrid">
+        <!-- Dynamic Services -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       WORK EXPERIENCE TIMELINE
+       =================================================================== -->
+  <section class="section experience-section" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i data-lucide="milestone" style="width: 15px; height: 15px;"></i> Career Journey</span>
+        <h2 class="section-title">Work <span class="gradient-text">Experience</span></h2>
+        <p class="section-description">
+          A track record of engineering cross-platform apps that solve complex business challenges and delight millions of mobile users.
+        </p>
+      </div>
+
+      <div class="timeline" id="experienceTimeline">
+        <!-- Dynamic Timeline -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       EDUCATION & COMPETITIVE PROGRAMMING SECTION
+       =================================================================== -->
+  <section class="section" id="education">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i data-lucide="graduation-cap" style="width: 15px; height: 15px;"></i> Academic & Competitive Background</span>
+        <h2 class="section-title">Education & <span class="gradient-text">Honors</span></h2>
+        <p class="section-description">
+          Strong computer science foundation from Fayoum University, high academic achievement, and active competitive programming leadership.
+        </p>
+      </div>
+
+      <div class="edu-honors-grid">
+        <!-- Left: Education Card -->
+        <div id="educationContainer"></div>
+
+        <!-- Right: Honors & Competitive Programming + Languages -->
+        <div>
+          <div class="honors-list" id="honorsContainer"></div>
+          <div class="languages-box" id="languagesContainer"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       TESTIMONIALS & CERTIFICATIONS
+       =================================================================== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i data-lucide="star" style="width: 15px; height: 15px;"></i> Endorsements & Proof</span>
+        <h2 class="section-title">Recommendations & <span class="gradient-text">Certifications</span></h2>
+        <p class="section-description">
+          What founders, CTOs, and product directors say about working together.
+        </p>
+      </div>
+
+      <div class="testimonials-grid" id="testimonialsGrid">
+        <!-- Dynamic Testimonials -->
+      </div>
+
+      <div class="certs-grid" id="certsGrid">
+        <!-- Dynamic Certifications -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       CONTACT SECTION
+       =================================================================== -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i data-lucide="mail" style="width: 15px; height: 15px;"></i> Let's Connect</span>
+        <h2 class="section-title">Ready to Build Your <span class="gradient-text">Next App?</span></h2>
+        <p class="section-description">
+          Have an exciting project, freelance opportunity, or full-time position? Send a message or chat with me directly on WhatsApp!
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Info Card -->
+        <div class="contact-card">
+          <h3 style="font-size: 1.5rem; margin-bottom: 12px;">Contact Information</h3>
+          <p style="color: var(--text-secondary); margin-bottom: 24px;">
+            Feel free to reach out through any of these communication channels. I typically respond within a few hours.
+          </p>
+
+          <div class="contact-methods">
+            <div class="contact-method-item">
+              <div class="method-icon"><i data-lucide="mail"></i></div>
+              <div>
+                <div class="method-title">Email Address</div>
+                <div class="method-value" id="contactEmail">ahmed.flutter.dev@example.com</div>
+              </div>
+            </div>
+
+            <div class="contact-method-item">
+              <div class="method-icon"><i data-lucide="phone"></i></div>
+              <div>
+                <div class="method-title">Direct Phone</div>
+                <div class="method-value" id="contactPhone">+20 100 123 4567</div>
+              </div>
+            </div>
+
+            <div class="contact-method-item">
+              <div class="method-icon"><i data-lucide="map-pin"></i></div>
+              <div>
+                <div class="method-title">Location & Availability</div>
+                <div class="method-value" id="contactLocation">Cairo, Egypt / Remote Worldwide</div>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top: 32px; display: flex; flex-direction: column; gap: 12px;">
+            <a href="#" id="directWhatsAppBtn" target="_blank" class="btn whatsapp-direct-btn">
+              <i data-lucide="message-circle"></i> Quick Chat on WhatsApp
+            </a>
+            <button onclick="copyEmailToClipboard()" class="btn btn-secondary">
+              <i data-lucide="copy"></i> Copy Email Address
+            </button>
+          </div>
+        </div>
+
+        <!-- Contact Form Card -->
+        <div class="contact-card">
+          <h3 style="font-size: 1.5rem; margin-bottom: 20px;">Send a Message</h3>
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="formName" class="form-label">Your Name</label>
+              <input type="text" id="formName" class="form-control" placeholder="e.g. John Doe" required>
+            </div>
+
+            <div class="form-group">
+              <label for="formEmail" class="form-label">Your Email</label>
+              <input type="email" id="formEmail" class="form-control" placeholder="e.g. john@company.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="formSubject" class="form-label">Subject</label>
+              <input type="text" id="formSubject" class="form-control" placeholder="e.g. Flutter Mobile Project Inquiry" required>
+            </div>
+
+            <div class="form-group">
+              <label for="formMessage" class="form-label">Project Details or Message</label>
+              <textarea id="formMessage" class="form-control" placeholder="Tell me about your app goals, timeline, and requirements..." required></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary" style="flex: 1;">
+                <i data-lucide="send"></i> Send Message
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       FOOTER
+       =================================================================== -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="brand-logo" style="justify-content: center;">
+        <div class="brand-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M14.314 0L2.3 12 6 15.7 21.686 0h-7.372zM14.314 9.429L7.857 15.886 14.314 22.343h7.372L15.229 15.886 21.686 9.429h-7.372z" fill="#ffffff"/>
+          </svg>
+        </div>
+        <span>Flutter Developer Portfolio</span>
+      </div>
+      <p class="footer-copy">
+        Crafted with <span style="color: #ef4444;">❤</span> for mobile engineering excellence. All rights reserved &copy; 2026.
+      </p>
+    </div>
+  </footer>
+
+  <!-- ===================================================================
+       PROJECT DETAIL / SMARTPHONE MODAL
+       =================================================================== -->
+  <div class="modal-overlay" id="projectModal" onclick="if(event.target === this) closeProjectModal()">
+    <div class="modal-container">
+      <button class="modal-close-btn" onclick="closeProjectModal()" aria-label="Close Modal">
+        <i data-lucide="x"></i>
+      </button>
+      <div class="modal-body" id="modalContent">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast" id="toast"></div>
+
+  <!-- Scripts: Data first, then main logic -->
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
