@@ -28,9 +28,9 @@ const portfolioData = {
 
   // 2. Highlights / Key Metrics
   metrics: [
-    { label: "ECPC 2026 Finalist", value: "competitor", icon: "award" },
-    { label: "ECPC 2025 Finalist", value: "competitor", icon: "award" },
-    { label: "Students Mentored", value: "1000+", icon: "users" },
+    { label: "ECPC 2026 Finalist", value: "Competitor", icon: "award" },
+    { label: "ECPC 2025 Finalist", value: "Competitor", icon: "award" },
+    { label: "Students Mentored", value: "100+", icon: "users" },
     { label: "Cumulative GPA", value: "3.36 / 4.0", icon: "graduation-cap" },
     { label: "Codeforces Rank", value: "Pupil", icon: "code" },
   ],
